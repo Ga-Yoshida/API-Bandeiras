@@ -46,7 +46,7 @@ async function renderizaPaises (){
         return `
                 <div class="card-container ${pais.region}"> 
                     <img src="${pais.flags.png}" alt="">
-                    <div class="card-texto">
+                    <div class="card-texto ${pais.region}">
                         <h2>${pais.name.common}</h2>
                         <hr>
                         <div>
@@ -71,5 +71,6 @@ async function renderizaPaises (){
     })
     container.innerHTML = cardPaises.join(' ')
 }  
+renderizaPaises()
 inputTexto.addEventListener('keyup', renderizaPaises)
 
